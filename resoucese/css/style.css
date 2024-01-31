@@ -1,0 +1,413 @@
+/* ============================================================================
+            Basic setup
+     =========================================================================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+  
+   scroll-behavior:smooth; 
+   transition: 5s;
+}
+body{
+    font-family: "Titillium Web", sans-serif;
+}
+ul li{
+    list-style-type: none;
+   
+    
+}
+/* ====================================================================================
+                                 Reusable components
+    =================================================================================== */    
+    
+     
+    .nav-parent{
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+      
+      }
+    
+    /* button design */
+    .btn:link,
+    .btn:visited,
+
+   .btn{background: #333;
+      font-size: 16px;
+      color: #fff;
+      text-decoration: none;
+      padding: 15px 60px;
+      border-radius: 4px;
+      display:inline-block;
+      margin-top: 50px;
+
+
+    }
+    /* for section============================================================================ */
+    h1{
+      text-transform: uppercase;
+    } h2{
+      font-size: 4rem;
+      font-weight:300;
+      margin-bottom: 2rem;
+    
+  
+    }
+    h2::after{
+      content: "";
+      display: block;
+      height: 0.3rem;
+      width: 8.5rem;
+      margin: auto;
+      margin-top: 2rem;
+      background-color: #333;
+    margin-bottom: 5rem;
+
+    }
+    h3{
+      font-size: 24px;
+      font-weight: 600;
+      text-transform: uppercase;
+      
+
+    }
+    h4{
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin-top:2.5rem ;
+      margin-bottom: 6rem;
+      text-transform: uppercase;
+    }
+    .box p{
+      font-size: 16px;
+      font-weight: 300;
+      margin-top: 3rem;
+    }
+    .services-description{
+      font-size: 1.8rem;
+      width:80%;
+      margin-left: 10%; 
+      line-height: 3rem;
+      text-transform: uppercase;
+    }
+    .clearfix::after{
+      content: "";
+      display: block;
+      clear: both;
+      height: 0;
+      visibility: hidden;
+    }
+    /* all section==================================================================================== */
+    section{
+      
+      margin: auto;
+      text-align: center;
+      padding: 120px 0;
+     
+    }
+    /* ====================================================================================
+                                 headear section
+         ===================================================================================*/ 
+         header{
+            
+          background-image: linear-gradient(rgba(102, 51, 102, 0.9),rgba(102, 51, 102, 0.9)) ,url(images/istockphoto-1488871811-1024x1024.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          height: 85vh;
+          
+        }
+        .vav-logo{
+          height: 35px;
+          width: auto;
+          margin-top:35px ;
+          position: relative;
+          }
+          /* ====================================================================================
+                            navication
+         ===================================================================================*/
+         .main-nav{
+       display: flex;
+       margin-top: 35px;
+      
+            
+         }
+.main-nav> li a:link,
+.main-nav> li a:visited{
+  background-color: hsla(300, 33%, 30%, 0);
+    text-decoration: none;
+    margin: 0 5px;
+    padding: 3px 15px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 3px;
+    transition: .5s;
+    display: inline-block;
+    
+}
+.main-nav> li:hover a:link,
+.main-nav> li:hover a:visited{
+  background-color: hsla(300, 33%, 30%, 1);
+
+}
+
+ 
+
+.hero-text-area{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #fff;
+
+}
+.btn-hero:link,
+.btn-hero:visited{
+  background: #ff6633;
+  border: px solid #b8a9a2;
+  
+}
+/* position sticky to jquery======================================================================= */
+.sticky{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(135, 80, 156, 0.9);
+  width: 100%;
+  padding: 1rem 0;
+
+}
+.sticky .vav-logo{
+  margin-top: 0;
+}
+.sticky .main-nav{
+  margin-top: .5rem;
+}
+/* ====================================================================================
+                                 services section
+         ===================================================================================*/ 
+
+.services-section{
+  background-color: #4d204c;
+  
+  background-image: linear-gradient(rgba(0, 153, 0.9, 204),rgba(0, 204, 153, 0.9)) ,url(images/bg-services.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            
+}
+
+.services-section h2::after{
+  background: #14a58c;
+}
+.services-section img{
+ 
+  margin-top: 4.5rem;
+  margin-bottom: 3.5rem;
+  max-width: 100%;
+}
+.row{
+  max-width: 1000px;
+  margin: auto;
+}
+.box{
+  padding: 1%;
+}
+/* ====================================================================================
+                                 team section
+         ===================================================================================*/ 
+.team-section{
+   background:#ff6633; 
+
+}.team-section .services-description{
+  margin-bottom: 2rem;
+}
+.role{display: inline-block;
+ color: #33ccff;
+ margin: 1rem 0;
+}
+.icon-design{
+  margin-top: 1rem;
+  display: flex;
+  grid-gap:1rem;
+  font-size: 1.5rem;
+  margin-left: 2.8rem;
+  color: #fff;
+}
+/* ====================================================================================
+                                 skil section
+         ===================================================================================*/
+         
+         .skill-section{
+          background-color:#001E36;
+          color: #fff;
+         }
+         /* ====================================================================================
+                                 portfolio section
+         ===================================================================================*/
+        .portfolio-section{
+          background-color: #FFDD99;
+          padding: 5rem 0;
+          
+          
+          
+        }
+        .portfolio-section h2{
+          color: #3c4761;
+        }
+        
+        .portfolio-filter{
+          margin: 3rem 0;
+        }
+        section .box{
+          padding-right:  1rem;
+         
+        }
+        
+        
+        
+
+.portfolio-filter button{
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  background-color:#EBC985;
+  color:#3c4761 ;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  border: 0;
+  margin:0 .5rem;
+  transition: 0.5s;
+
+}
+.portfolio-filter button:hover{
+  cursor: pointer;
+  color: #3c4761;
+  box-shadow: inset 0 0.3rem .5rem rgba(60, 71, 97, 0.6);
+}
+.portfolio-image{
+  width: 27rem;
+  height: 100%;
+  }
+/* .portfolio-section .btn-load{
+  background-color: #14a58c;
+  visibility: hidden; */
+
+.portfolio-section .mixitup-control-active{
+  background-color: #fff;
+}
+/* <!-- ========================================================================================
+                              clients-review section
+======================================================================================== --> */
+.clients-review{
+  background-color: #D74680;
+  color: #fff;
+}
+
+.clients-review h2::after{
+  margin-bottom: 0%;
+}
+.clients-review .text-description{
+ font-size: 2rem;
+  margin-top: 2rem;
+}
+.clients-review .col:nth-child(3){
+  margin-left: 0;
+}
+.clients-review .col:nth-child(1),
+.clients-review .col:nth-child(2){
+  margin-top: 4rem;
+}
+.clients-review .col:nth-child(3),
+.clients-review .col:nth-child(4){
+  margin-top: 8rem;
+}
+.clients-image img{
+  width: 8rem;
+  
+}
+.clients-review .box{
+  display: flex;
+  text-align: left;
+}
+.clients-description{
+  width: 30rem;
+  margin-left: 1rem;
+}
+.clients-description p{
+  font-size: 1.2rem;
+  font-style: italic;
+   margin-top: 0%;
+  margin-bottom: 2rem;
+ margin-right: 1rem;
+  font-weight: 300;
+}
+.clients-description .role{
+  color:#FFDD99;
+  margin-top: 0rem;
+}
+/* <!-- ========================================================================================
+                            contact section
+======================================================================================== --> */
+
+.contact-section{
+  background-color:#3C5499;
+  color: #fff;
+}
+.contact-section h2::after{
+  background:#273A71 ;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+}
+.contact-section form{
+  margin-top: 5rem;
+  max-width: 70%;
+  margin-left: 15%;
+ 
+}
+.contact-section input[type="text"],
+.contact-section input[type="Email"],
+.contact-section  textarea{
+  background-color:#273A71 ;
+  border: none;
+  width: 100%;
+  color:#fff;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  margin: 0.5rem  0 ;
+}
+.contact-section  textarea{
+  height: 20rem;
+}
+.contact-section form ::placeholder{
+  color: #fff;
+  opacity: 0.6;
+  
+}
+.contact-section .btn-submit{
+  background: #30BAE7;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  border: 0;
+  border-bottom: 0.3rem solid #299EC5;
+  
+
+}
+.contact-section .btn-submit:hover{
+  cursor: pointer;
+
+}
+
+
+
+
+
+
